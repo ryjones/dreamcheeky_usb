@@ -24,7 +24,7 @@ def main():
         current_temp = round(1.8 * (response['main']['temp'] - 273) + 32, 1)
 
         leds.clear_screen()
-        leds.scroll_message("   Current Temp:", 21, 30)
+        leds.scroll_message("Current Temp:", 21, 60)
 
         leds.write_string(f"{current_temp}ºF", 0)
         for _ in range(50):
@@ -34,7 +34,7 @@ def main():
         sleep(.5)
 
         leds.clear_screen()
-        leds.scroll_message("   Current Time:", 21, 30)
+        leds.scroll_message("Current Time:", 21, 60)
 
         leds.write_string(f"{strftime('%H:%M')}", 1)
         for _ in range(50):
